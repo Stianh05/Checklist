@@ -36,7 +36,7 @@ export default function ProductList() {
       {/* Category Banner */}
       <div className="bg-brand-dark px-6 py-4 rounded-[20px] text-center shadow-xl">
         <h2 className="text-xl font-black uppercase tracking-[0.05em] text-white">
-          Drink restocking
+          Check list
         </h2>
       </div>
 
