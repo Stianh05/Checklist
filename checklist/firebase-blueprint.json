@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "A beverage or item in the inventory",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "sortOrder": { "type": "number" },
+        "active": { "type": "boolean" }
+      },
+      "required": ["name", "category", "active"]
+    },
+    "ItemCount": {
+      "title": "Item Count",
+      "description": "Current quantity and completion status for a product",
+      "type": "object",
+      "properties": {
+        "quantity": { "type": "number" },
+        "completed": { "type": "boolean" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["quantity", "completed"]
+    }
+  },
+  "firestore": {
+    "products": {
+      "schema": "Product",
+      "description": "Master list of products"
+    },
+    "items": {
+      "schema": "ItemCount",
+      "description": "Current stock replenishment counts"
+    }
+  }
+}
